@@ -1,11 +1,11 @@
 # Site settings
 author: Gina Sekhar
-title: 
+title: Gina Sekhar's Blog -Flatiron School - 10/07/2019 Online fulltime
 header-img: img/home-bg.png
 email: ginasekhar@yahoo.com
 copyright_name: Gina Sekhar
 description: > # this means to ignore newlines until "baseurl:"
-  
+  Gina Sekhar's Blog
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  ginasekhar
