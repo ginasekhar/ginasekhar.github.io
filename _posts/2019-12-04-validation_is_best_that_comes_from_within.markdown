@@ -45,6 +45,7 @@ class PracticeLog < ActiveRecord::Base
         errors.add(:date, "must be within the past year")
       end
     end
+end
 ```
 
  Any errors on validation can be accessed using ActiveRecord’s errors method. 
