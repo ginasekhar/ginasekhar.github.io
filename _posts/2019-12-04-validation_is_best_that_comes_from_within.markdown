@@ -9,11 +9,4 @@ permalink:  validation_is_best_that_comes_from_within
 
 Applications need validations to ensure that data that a user inputs is valid before it is saved into the database. ActiveRecords allows us to perform model-level validations. For my Sinatra project, I created an app that will allow music students to log their practice hours each day.  I created a student model and a practice log model.  With the power of ActiveRecord validations, I was able to perform validations of user entered data within the models themselves. These validations are automatically run when the object is created, saved or updated or can be triggered by invoking the *valid?* method before saving.
 
-In my student model, I was able to check that an attribute was not blank, unique (e.g. username, email) and had the correct format for that attribute. In my practice_log model, I checked that practice_minutes was numeric and was within a predetermined range and specified a custom message to be displayed when data entered was not valid. I even created my own custom validation by defining a method (i.e. log_date_in_range) created to make sure that the date the user selected was within the past year. My models are shown below:
-
- Any errors on validation can be accessed using ActiveRecord’s errors method. I used this feature in conjunction with  the sinatra-flash gem to render error messages.  For example, when creating a new practice_log, I  "build" a new practice log with the data the user input and then validate it .  If it is not valid, I set the flash error message and this is rendered when the user is redirected. 
- 
-Having the validations in the model using ActiveRecord's built-in features made my code more DRY and robust. In coding, as in life, "Validation is best that comes from within…"
-
-
-
+In my student model, I was able to check that an attribute was not blank, unique (e.g. username, email) and had the correct format for that attribute. In my practice_log model, I checked that practice_minutes was numeric and was within a predetermined range and specified a custom message to be displayed when data entered was not valid. I even created my own custom validation by defining a method (i.e. log_date_in_range) created to make sure that the date the user selected was within the past year.
