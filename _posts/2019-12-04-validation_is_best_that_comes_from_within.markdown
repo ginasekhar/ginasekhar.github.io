@@ -50,8 +50,10 @@ end
 
  Any errors on validation can be accessed using ActiveRecord’s errors method. 
  I used this feature in conjunction with  the sinatra-flash gem to render error messages. 
- I found detailed instructions on sinatra-flash at  https://gist.github.com/cmkoller/0d3b048b3c4b48ee4955
+ I found detailed instructions on sinatra-flash at  https://gist.github.com/cmkoller/0d3b048b3c4b48ee4955.
  For example, when creating a new practice_log, I  "build" a new practice log with the data the user input and then validate it . If it is not valid, I set the flash error message and this is rendered when the user is redirected.
+ 
+  
 
 ```
            @practice_log = current_user.practice_logs.build(params)
