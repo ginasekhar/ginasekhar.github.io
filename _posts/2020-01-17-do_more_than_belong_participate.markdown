@@ -73,7 +73,11 @@ current_user.tickets.build(ticket_params)
 
 In my theater owner view of the tickets index page I was able to get information from all 4 models very easily without any hassle using the following code in my view: 
 ```
-<strong>Ticket Type:</strong> <%= ticket.ticket_type %><strong> Number: </strong> <%= ticket.id %> <strong> Customer: </strong><%= ticket.user.name %> <strong> Movie: </strong><%= ticket.showing.movie.title %><strong> Show: </strong> <%= ticket.showing.show_date %> <%= ticket.showing.show_time %>
+<strong>Ticket Type:</strong> <%= ticket.ticket_type %>
+<strong> Number: </strong> <%= ticket.id %> 
+<strong> Customer: </strong><%= ticket.user.name %> 
+<strong> Movie: </strong><%= ticket.showing.movie.title %>
+<strong> Show: </strong> <%= ticket.showing.show_date %> <%= ticket.showing.show_time %>
 ```
 
 The ActiveRecord associations did all the the database joins for me.  
