@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Do more than belong: participate..."
-date:       2020-01-18 04:35:34 +0000
+date:       2020-01-17 23:35:35 -0500
 permalink:  do_more_than_belong_participate
 ---
 
@@ -25,23 +25,24 @@ class Movie < ApplicationRecord
     has_many :tickets, through: :showings
      ....
 end
-class Showing < ApplicationRecord
 
+class Showing < ApplicationRecord
     belongs_to :movie
     has_many :tickets
     has_many :users, through: :tickets
-  ...
-	end
+    ...
+end
 	
-	class Ticket < ApplicationRecord
-     belongs_to :user
-     belongs_to :showing
-	...
-	end
-	class User < ApplicationRecord
+class Ticket < ApplicationRecord
+    belongs_to :user
+    belongs_to :showing
+	  ...
+end
+
+class User < ApplicationRecord
      has_many :tickets
      has_many :showings, through: :tickets
-	end
+end
 
 		
 		
