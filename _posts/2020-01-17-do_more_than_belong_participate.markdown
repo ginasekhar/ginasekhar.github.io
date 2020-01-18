@@ -56,9 +56,9 @@ movie.showings << showing – establishes a new relation between a movie and 
 
 showing.movie – references the movie the showing belongs to	
 
-movie.showings.build({ }) –instantiates a new ‘showing’ object and associated it with the movie. It populates                      the movie_id attribute on the showing. This is similar to the statement Showing.new({movie_id: movie.id}). It is not saved to the database until you call "save" on the object.
+movie.showings.build({ }) –instantiates a new ‘showing’ object and associates it with the movie. 
 
-movie.showings.create({ }) – instantiates a new showing and saves it into the database.
+movie.showings.create({ }) – instantiates a new showing object, associates it with the movie and saves it into the database.
 
 showing.build_movie – same as above, instantiates a new movie without saving it
 
@@ -67,13 +67,18 @@ showing.create_movie – same as above, instantiates and saves the movie into t
 ```
 
 In my application, I have used these relationships to reference and build objects - for example in my tickets controller, I create a new ticket using the statement:
-`current_user.tickets.build(ticket_params)`.  
+```
+current_user.tickets.build(ticket_params)
+```
 
 In my theater owner view of the tickets index page I was able to get information from all 4 models very easily without any hassle using the following code in my view: 
-`<strong>Ticket Type:</strong> <%= ticket.ticket_type %><strong> Number: </strong> <%= ticket.id %> <strong> Customer: </strong><%= ticket.user.name %> <strong> Movie: </strong><%= ticket.showing.movie.title %><strong> Show: </strong> <%= ticket.showing.show_date %> <%= ticket.showing.show_time %> ` .
+```
+<strong>Ticket Type:</strong> <%= ticket.ticket_type %><strong> Number: </strong> <%= ticket.id %> <strong> Customer: </strong><%= ticket.user.name %> <strong> Movie: </strong><%= ticket.showing.movie.title %><strong> Show: </strong> <%= ticket.showing.show_date %> <%= ticket.showing.show_time %>
+```
+
 The ActiveRecord associations did all the the database joins for me.  
 
-Living up to William Arthur Ward's advice, ActiveRecord models through associations, 'Do more than belong:  they participate'
+Living up to William Arthur Ward's suggestion, ActiveRecord models through associations, 'Do more than belong:  they participate'
 
 
 
