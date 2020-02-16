@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      "An ounce of performance is worth a pound of promise - Mae West"
+title:      "An ounce of performance is worth a pound of promises - Mae West"
 date:       2020-02-16 10:27:18 -0500
 permalink:  an_ounce_of_performance_is_worth_a_pound_of_promise_-_mae_west
 ---
@@ -59,4 +59,4 @@ function createDestination () {
   }
 ```
 
- In applications that deals with a large amount of data, executing tasks independent of the fetch() would make a noticeable improvement in performance. By using "Promises", we can improve performance and therby the user experience.  Indeed an ounce of performance is worth a pound of promise.
+ In applications that deals with a large amount of data, executing tasks independent of the fetch() would make a noticeable improvement in performance. By using "Promises", we can improve performance and therby the user experience.  Indeed an ounce of performance is worth a pound of promises.
